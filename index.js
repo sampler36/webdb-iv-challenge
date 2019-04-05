@@ -2,7 +2,15 @@
 const express = require('express');
 const helmet = require('helmet');
 const knex = require('knex');
-const knexConfig = require('./knexfile').development;
+const knexConfig = require('./knexfile').development; // importing from knexfile 
+
+// const knexConfig = {
+//     client: 'sqlite3',
+//     connection: {
+//         filename:'./data/dev.sqlite3'
+//     },
+//     useNullAsDefault:true,
+// };
 
 const db = knex(knexConfig);
 
